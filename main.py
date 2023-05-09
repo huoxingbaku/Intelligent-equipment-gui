@@ -26,7 +26,7 @@ class winlogin(untitled.Ui_MainWindow, QMainWindow):
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_time)
         self.timer.start(0)
-        self.pixmap = QPixmap("./image/天线.png")
+        self.pixmap = QPixmap("./image/警告2 (1).png")
         self.run()
     def run(self):
         print("111")
