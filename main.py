@@ -30,18 +30,18 @@ class winlogin(untitled.Ui_MainWindow, QMainWindow):
         self.run()
     def run(self):
         print("111")
-        self.label_4.setText('1营1连一炮')
-        self.label_3.setPixmap(self.pixmap)
-        self.label_3.resize(self.pixmap.width(), self.pixmap.height())
-        self.label_3.setScaledContents(True)
+        self.label_5.setText('1营1连一炮')
+        self.label_4.setPixmap(self.pixmap)
+        self.label_4.resize(self.pixmap.width(), self.pixmap.height())
+        self.label_4.setScaledContents(True)
         self.label_2.setText('图标显示2')
-        self.label_2.setText('图标显示3')
+        # self.label_2.setText('图标显示3')
     def update_time(self):
         # 获取当前时间和日期
         current_time = QTime.currentTime().toString(Qt.DefaultLocaleLongDate)
         current_date = QDate.currentDate().toString(Qt.DefaultLocaleLongDate)
         # 更新标签显示时间和日期
-        self.label_5.setText(f"{current_date} {current_time}")
+        self.label_3.setText(f"{current_date} {current_time}")
 def main():
     '''防止界面变形'''
     QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling)
