@@ -26,7 +26,7 @@
       <x>10</x>
       <y>9</y>
       <width>771</width>
-      <height>42</height>
+      <height>51</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -115,6 +115,9 @@
        <property name="text">
         <string/>
        </property>
+       <property name="pixmap">
+        <pixmap resource="image/新建文本文档.qrc">:/警告2 (1).png</pixmap>
+       </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
        </property>
@@ -191,7 +194,7 @@
      <number>10</number>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>6</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QLabel" name="label_6">
@@ -210,7 +213,7 @@
        </font>
       </property>
       <property name="text">
-       <string/>
+       <string>1111</string>
       </property>
      </widget>
     </widget>
@@ -231,7 +234,7 @@
        </font>
       </property>
       <property name="text">
-       <string/>
+       <string>222</string>
       </property>
      </widget>
     </widget>
@@ -252,7 +255,7 @@
        </font>
       </property>
       <property name="text">
-       <string/>
+       <string>333</string>
       </property>
      </widget>
     </widget>
@@ -273,7 +276,7 @@
        </font>
       </property>
       <property name="text">
-       <string/>
+       <string>444</string>
       </property>
      </widget>
     </widget>
@@ -294,7 +297,7 @@
        </font>
       </property>
       <property name="text">
-       <string/>
+       <string>555</string>
       </property>
      </widget>
     </widget>
@@ -315,7 +318,7 @@
        </font>
       </property>
       <property name="text">
-       <string/>
+       <string>666</string>
       </property>
      </widget>
     </widget>
@@ -336,7 +339,7 @@
        </font>
       </property>
       <property name="text">
-       <string/>
+       <string>777</string>
       </property>
      </widget>
     </widget>
@@ -457,6 +460,8 @@
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="image/新建文本文档.qrc"/>
+ </resources>
  <connections/>
 </ui>

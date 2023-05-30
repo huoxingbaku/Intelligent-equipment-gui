@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="/">
+    <file>警告2 (1).png</file>
+    <file>大炮 (1).png</file>
+    <file>大炮 (2).png</file>
+    <file>大炮.png</file>
+    <file>警告 (1).png</file>
+    <file>警告 (2).png</file>
+    <file>警告.png</file>
+  </qresource>
+</RCC>

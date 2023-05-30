@@ -27,6 +27,21 @@ class winlogin(untitled.Ui_MainWindow, QMainWindow):
         self.timer.timeout.connect(self.update_time)
         self.timer.start(0)
         self.pixmap = QPixmap("./image/警告2 (1).png")
+        # pushButton_21 = self.pushButton_2
+        self.pushButton_2.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.page))
+        self.pushButton_3.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.page_2))
+        self.pushButton_4.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.page_3))
+        self.pushButton_5.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.page_4))
+        self.pushButton_6.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.page_5))
+        self.pushButton_7.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.page_6))
+        self.pushButton.clicked.connect(lambda: self.stacked_widget.setCurrentWidget(self.page_7))
+        # self.page.pushButton_2.clicked.connect(lambda: self.stacked_widget.setCurrentIndex(0))
+        # self.page_2.pushButton_3.clicked.connect(lambda: self.stacked_widget.setCurrentIndex(0))
+        # self.page_3.pushButton_4.clicked.connect(lambda: self.stacked_widget.setCurrentIndex(0))
+        # self.page_4.pushButton_5.clicked.connect(lambda: self.stacked_widget.setCurrentIndex(0))
+        # self.page_5.pushButton_6.clicked.connect(lambda: self.stacked_widget.setCurrentIndex(0))
+        # self.page_6.pushButton_7.clicked.connect(lambda: self.stacked_widget.setCurrentIndex(0))
+        # self.page_7.pushButton.clicked.connect(lambda: self.stacked_widget.setCurrentIndex(0))
         self.run()
     def run(self):
         print("111")
@@ -36,6 +51,7 @@ class winlogin(untitled.Ui_MainWindow, QMainWindow):
         self.label_4.setScaledContents(True)
         self.label_2.setText('图标显示2')
         # self.label_2.setText('图标显示3')
+
     def update_time(self):
         # 获取当前时间和日期
         current_time = QTime.currentTime().toString(Qt.DefaultLocaleLongDate)
