@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import Qt
 
 
 class Ui_MainWindow(object):
@@ -40,7 +41,7 @@ class Ui_MainWindow(object):
         self.label_3.setText("")
         self.label_3.setAlignment(QtCore.Qt.AlignCenter)
         self.label_3.setObjectName("label_3")
-        self.horizontalLayout_2.addWidget(self.label_3)
+        self.horizontalLayout_2.addWidget(self.label_3, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
         self.label_5 = QtWidgets.QLabel(self.horizontalLayoutWidget_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -55,7 +56,7 @@ class Ui_MainWindow(object):
         self.label_5.setText("")
         self.label_5.setAlignment(QtCore.Qt.AlignCenter)
         self.label_5.setObjectName("label_5")
-        self.horizontalLayout_2.addWidget(self.label_5)
+        self.horizontalLayout_2.addWidget(self.label_5, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
         self.label_4 = QtWidgets.QLabel(self.horizontalLayoutWidget_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -79,12 +80,13 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
         self.label_2.setSizePolicy(sizePolicy)
         self.label_2.setMinimumSize(QtCore.QSize(50, 0))
+
         font = QtGui.QFont()
         font.setFamily("Verdana")
         font.setPointSize(11)
         self.label_2.setFont(font)
         self.label_2.setText("")
-        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setAlignment(Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.horizontalLayout_2.addWidget(self.label_2)
         self.label = QtWidgets.QLabel(self.horizontalLayoutWidget_2)
@@ -101,7 +103,7 @@ class Ui_MainWindow(object):
         self.label.setText("")
         self.label.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.label.setObjectName("label")
-        self.horizontalLayout_2.addWidget(self.label)
+        self.horizontalLayout_2.addWidget(self.label, 0, QtCore.Qt.AlignRight|QtCore.Qt.AlignVCenter)
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
         self.stackedWidget.setGeometry(QtCore.QRect(30, 80, 621, 421))
         self.stackedWidget.setLineWidth(10)
@@ -219,7 +221,8 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(6)
+        self.stackedWidget.setCurrentIndex(0)
+        self.pushButton.clicked.connect(self.stackedWidget.show) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

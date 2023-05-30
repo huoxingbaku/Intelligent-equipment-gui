@@ -25,9 +25,11 @@ class WinLogin(QMainWindow):
         self.timer.start(0)
         self.ui.label_5.setText('1营1连一炮')
         pixmap = QPixmap("./image/警告2 (1).png")
-        pixmap = pixmap.scaled(20, 20)
+        pixmap = pixmap.scaled(30, 30)
         self.ui.label_4.setPixmap(pixmap)
+        self.ui.label_2.setAlignment(Qt.AlignRight)
         self.ui.label_2.setText('图标显示2')
+        self.ui.label_2.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
     def update_time(self):
         # 获取当前时间和日期
         current_time = QTime.currentTime().toString(Qt.DefaultLocaleLongDate)
