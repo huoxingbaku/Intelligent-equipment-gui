@@ -1,6 +1,6 @@
 import sys
 
-from PyQt5.QtCore import QTime, QDate, Qt
+from PyQt5.QtCore import QTime, QDate, Qt, QTimer
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from untitled import Ui_MainWindow
 from PyQt5.QtGui import QPixmap
@@ -21,17 +21,20 @@ class WinLogin(QMainWindow):
         self.ui.pushButton_6.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_5))
         self.ui.pushButton_7.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_6))
         self.ui.pushButton.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_7))
-
+        self.timer = QTimer(self)
+        self.timer.timeout.connect(self.update_time)
+        self.timer.start(0)
         self.run()
 
     def run(self):
         print("111")
+
         self.ui.label_5.setText('1营1连一炮')
         self.ui.label_4.setPixmap(QPixmap("./image/警告2 (1).png"))
         self.ui.label_4.resize(self.ui.label_4.pixmap().width(), self.ui.label_4.pixmap().height())
         self.ui.label_4.setScaledContents(True)
         self.ui.label_2.setText('图标显示2')
-
+        # self.ui.label_3.setText(f"{self.ui.current_date} {self.ui.current_time}")
     def update_time(self):
         # 获取当前时间和日期
         current_time = QTime.currentTime().toString(Qt.DefaultLocaleLongDate)
