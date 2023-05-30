@@ -1,5 +1,4 @@
 import sys
-
 from PyQt5.QtCore import QTime, QDate, Qt, QTimer
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from untitled import Ui_MainWindow
@@ -9,10 +8,10 @@ from PyQt5.QtGui import QPixmap
 class WinLogin(QMainWindow):
     def __init__(self):
         super().__init__()
-
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-
+        self.run()
+    def run(self):
         # 将信号连接到槽
         self.ui.pushButton_2.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page))
         self.ui.pushButton_3.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_2))
@@ -24,17 +23,11 @@ class WinLogin(QMainWindow):
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_time)
         self.timer.start(0)
-        self.run()
-
-    def run(self):
-        print("111")
-
         self.ui.label_5.setText('1营1连一炮')
-        self.ui.label_4.setPixmap(QPixmap("./image/警告2 (1).png"))
-        self.ui.label_4.resize(self.ui.label_4.pixmap().width(), self.ui.label_4.pixmap().height())
-        self.ui.label_4.setScaledContents(True)
+        pixmap = QPixmap("./image/警告2 (1).png")
+        pixmap = pixmap.scaled(20, 20)
+        self.ui.label_4.setPixmap(pixmap)
         self.ui.label_2.setText('图标显示2')
-        # self.ui.label_3.setText(f"{self.ui.current_date} {self.ui.current_time}")
     def update_time(self):
         # 获取当前时间和日期
         current_time = QTime.currentTime().toString(Qt.DefaultLocaleLongDate)
