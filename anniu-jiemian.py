@@ -29,7 +29,7 @@ class WinLogin(QMainWindow):
         self.ui.label_4.setPixmap(pixmap)
         self.ui.label_2.setAlignment(Qt.AlignRight)
         self.ui.label_2.setText('图标显示2')
-        self.ui.label_2.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
+        self.ui.label_2.setAlignment(Qt.AlignRight)
     def update_time(self):
         # 获取当前时间和日期
         current_time = QTime.currentTime().toString(Qt.DefaultLocaleLongDate)
